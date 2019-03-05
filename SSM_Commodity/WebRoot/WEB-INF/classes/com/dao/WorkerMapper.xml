@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.WorkerMapper" >
+  <resultMap id="BaseResultMap" type="com.pojo.Worker" >
+    <id column="workerNo" property="workerno" jdbcType="INTEGER" />
+    <result column="adminNo" property="adminno" jdbcType="INTEGER" />
+    <result column="workerName" property="workername" jdbcType="VARCHAR" />
+    <result column="workerSex" property="workersex" jdbcType="CHAR" />
+    <result column="workerPhone" property="workerphone" jdbcType="VARCHAR" />
+    <result column="workerSalary" property="workersalary" jdbcType="INTEGER" />
+    <result column="workerPwd" property="workerpwd" jdbcType="VARCHAR" />
+  </resultMap>
+  <!-- 登陆匹配 -->
+  <select id="getwork" resultType="Worker">
+SELECT 	workerNo, 
+		adminNo, 
+		workerName, 
+		workerSex, 
+		workerPhone, 
+		workerSalary, 
+		workerPwd
+		 
+		FROM 
+		commodity_database.worker 
+			WHERE workerNo=#{workerno} 
+			AND adminNo=#{adminno} 
+			AND workerPwd=#{workerpwd}
+		
+  </select>
+  <!-- 查询用户账号名放入session -->
+  <select id="getWorkerName" resultType="Worker" >
+  SELECT 	
+	  	workerNo, 
+		adminNo, 
+		workerName
+		 
+			FROM 
+			commodity_database.worker 
+			WHERE workerNo=#{workerno}
+  </select>
+  <!-- 修改个人密码 -->
+  <update id="changePwd">
+  
+UPDATE commodity_database.worker 
+	SET
+	
+	workerPwd = #{workerpwd}
+	
+	WHERE
+	workerNo = #{workerno} ;
+  </update>
+  <!-- 修改员工信息 -->
+  <update id="updateWorker">
+  
+UPDATE commodity_database.worker 
+	SET
+	adminNo = #{adminno} , 
+	workerName = #{workername} , 
+	workerSex = #{workersex} , 
+	workerPhone = #{workerphone} , 
+	workerSalary = #{workersalary} , 
+	workerPwd = #{workerpwd}
+	
+	WHERE
+	workerNo = #{workerno} ;
+  
+  </update>
+  
+  <select id="">
+  
+  <!-- 根据ID查询员工信息 -->
+SELECT 	
+	workerNo, 
+	adminNo, 
+	workerName, 
+	workerSex, 
+	workerPhone, 
+	workerSalary, 
+	workerPwd
+	 
+	FROM 
+	commodity_database.worker 
+	WHERE workerNo=#{workerno}
+  
+  
+  </select>
+  
+  <!-- 添加员工 -->
+  <insert id="addWorker">
+  	
+INSERT INTO commodity_database.worker 
+	( 
+	adminNo, 
+	workerName, 
+	workerSex, 
+	workerPhone, 
+	workerSalary, 
+	workerPwd
+	)
+	VALUES
+	( 
+	#{adminno},
+	#{workername},
+	#{workersex},
+	#{workerphone},
+	#{workersalary},
+	#{workerpwd}
+	);
+  
+  </insert>
+  <!--根据ID删除员工  -->
+  <delete id="delWorker">
+DELETE FROM commodity_database.worker 
+	WHERE
+	workerNo = #{workerno} ;
+  
+  </delete>
+</mapper>

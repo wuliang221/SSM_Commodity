@@ -6,7 +6,7 @@ function js_xiu1(on,d1,d2,d3,d4,d5,d6) {
 	$("#inputEmail10").val(on);
 	$("#inputEmail11").val(d1);
 	$("#inputEmail12").val([d2]);
-	$("#inputEmail13").val(d3);
+	$("#inputEmail13").val([d3]);
 	$("#inputEmail14").val(d4);
 	$("#inputEmail15").val(d5);
 	$("#inputEmail16").val(d6);

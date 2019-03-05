@@ -28,7 +28,7 @@
                                     <tr>
                                         <th>商品名</th>
                                         <th>商品类别</th>
-                                        <th>规格</th>
+                                        <th>供应商</th>
                                         <th>单位</th>
                                         <th>进货价</th>
                                         <th>销售价</th>
@@ -41,13 +41,13 @@
                                     <tr id="SP${g.goodsno }">
                                         <td>${g.goodsname }</td>
                                         <td>${g.typeName }</td>
-                                        <td>${g.goodsnorm }</td>
+                                        <td>${g.supplierName }</td>
                                         <td>${g.goodsunit }</td>
                                         <td>${g.goodsinprise}</td>
                                         <td>${g.goodsoutprise }</td>
                                         <td>
                                         	<button type="button" onclick="js_xiu1('${g.goodsno }','${g.goodsname }',
-                                        	'${g.typeno }','${g.goodsunit }','${g.supplierName}','${g.goodsinprise }'
+                                        	'${g.typeno }','${g.supplierno }','${g.goodsunit}','${g.goodsinprise }'
                                         	,'${g.goodsoutprise }')" class="btn btn-primary btn-xs">修改</button>
                                             <button type="button" onclick="js_shanchu('${g.goodsno }','SP1','${g.typeName }')" class="btn btn-danger btn-xs">删除</button>
                                         </td>

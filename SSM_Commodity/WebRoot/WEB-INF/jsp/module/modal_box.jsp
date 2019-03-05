@@ -29,10 +29,15 @@
 		    </div>
 		  </div>
 		  <div class="form-group">
-		    <label for="inputEmail3" class="col-sm-2 control-label">规格</label>
-		    <div class="col-sm-10">
-		      <input type="tezt" class="form-control" name="wagecoefficient" id="inputEmail13" >
-		    </div>
+		    <label for="inputEmail3" class="col-sm-2 control-label">供应商</label>
+		    <div class="col-sm-10" id="depart">
+		     <select class="form-control" id="inputEmail13">
+                   <c:forEach items="${supplier }" var="s">
+	                 <option value="${s.supplierno }">${s.suppliername }</option>
+	                 </c:forEach>
+                   </select>
+				</select>
+			</div>
 		  </div>
 		   <div class="form-group">
 		    <label for="inputEmail3" class="col-sm-2 control-label">单位(g)</label>
