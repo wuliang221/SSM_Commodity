@@ -46,6 +46,7 @@ public class addConeroller {
 	@ResponseBody
 	public void addGYS(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		System.out.println("======================================================================供应商添加add页面");
+		
 		request.getRequestDispatcher("/WEB-INF/jsp/add/addGYS.jsp").forward(request, response);
 	}
 	
