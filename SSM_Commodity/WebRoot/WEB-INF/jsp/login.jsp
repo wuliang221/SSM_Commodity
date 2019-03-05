@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <div class="account-box"> 
-                        <form id="from" action="#">
+                        <form id="from" action="${pageContext.request.contextPath }/fin/z.html" method="post">
                             <div class="form-group">
                                 <input type="text"  id="inputUsernameEmail" class="form-control" placeholder="请输入用户名">
                             </div>
@@ -103,9 +103,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				dataType:"json",	
 				success : function(data) {
 				if(data == "session1"){
-						window.location.href=url+"/fin/z.html";
+						/* window.location.href=url+"/fin/z.html"; */
+						return true;
 					}
-					return true;
+					
 					
 				},
 				error : function() {
