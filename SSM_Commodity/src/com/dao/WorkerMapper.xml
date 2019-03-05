@@ -10,11 +10,6 @@
     <result column="workerSalary" property="workersalary" jdbcType="INTEGER" />
     <result column="workerPwd" property="workerpwd" jdbcType="VARCHAR" />
   </resultMap>
-  <select id="countSell" resultType="int">
-  
- 	 SELECT COUNT(*) FROM commodity_database.worker
-  
-  </select>
   <!-- 登陆匹配 -->
   <select id="getwork" resultType="Worker">
 SELECT 	workerNo, 
@@ -71,7 +66,7 @@ UPDATE commodity_database.worker
   
   </update>
   
-  <select id="getWorker">
+  <select id="">
   
   <!-- 根据ID查询员工信息 -->
 SELECT 	
@@ -86,25 +81,6 @@ SELECT
 	FROM 
 	commodity_database.worker 
 	WHERE workerNo=#{workerno}
-  
-  
-  </select>
-  
-  <select id="getWorker">
-  
-  <!-- 根据姓名查询员工信息 -->
-SELECT 	
-	workerNo, 
-	adminNo, 
-	workerName, 
-	workerSex, 
-	workerPhone, 
-	workerSalary, 
-	workerPwd
-	 
-	FROM 
-	commodity_database.worker 
-	WHERE workerName=#{workername}
   
   
   </select>

@@ -83,24 +83,14 @@ public class WorkerServiceImpl implements WorkerService {
 		return result;
 	}
 	@Override
-	public boolean delWorker(Integer workerno) {
+	public boolean delWorker(Integer adminno) {
 
 		boolean result=false;
-		int rs=workerMapper.delWorker(workerno);
+		int rs=workerMapper.delWorker(adminno);
 		if(rs>0){
 			result=true;
 		}
 		return result;
-	}
-	@Override
-	public int countWorker() {
-		// TODO Auto-generated method stub
-		return workerMapper.countWorker();
-	}
-	@Override
-	public Worker getWorkername(String workername) {
-		// TODO Auto-generated method stub
-		return workerMapper.getWorkername(workername);
 	}
 	 
 

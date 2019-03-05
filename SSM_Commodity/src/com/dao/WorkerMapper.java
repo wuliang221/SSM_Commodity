@@ -13,10 +13,6 @@ public interface WorkerMapper {
 						@Param("adminno")Integer adminno);
 	// 查询用户名（放入session）
 	public Worker getWorkerName(@Param("workerno")Integer workerno);
-	
-	// 查询全部信息
-	public int countWorker();
-	
 	//分页查询所有员工的信息
 	public List<Worker> getAllworker(@Param("pageNo")Integer pageNo,@Param("pageSize")Integer pageSize,
 										@Param("workerno")Integer workerno,@Param("workername")String workername);
@@ -33,15 +29,12 @@ public interface WorkerMapper {
 	//根据ID查询员工信息
 	public Worker getWorker(@Param("workerno")Integer workerno);
 	
-	//根据姓名查询员工信息
-	public Worker getWorkername(@Param("workername")String workername);
-	
 	//添加员工信息
 	public int addWorker(@Param("adminno")Integer adminno,@Param("workername")String workername,
 							@Param("workersex")String workersex,@Param("workerphone")String workerphone,
 							@Param("workersalary")Integer workersalary,@Param("workerpwd")String workerpwd);
 	//根据ID删除员工信息
-	public int delWorker(@Param("workerno")Integer workerno);
+	public int delWorker(@Param("adminno")Integer adminno);
 				
  
 }

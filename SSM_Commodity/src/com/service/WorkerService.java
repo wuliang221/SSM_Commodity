@@ -2,8 +2,6 @@ package com.service;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.pojo.Worker;
 
 
@@ -16,7 +14,6 @@ public interface WorkerService {
 		//  查询用户名（放入session）
 		public Worker getWorkerName(Integer workerno);
 		
-		public int countWorker();
 		
 		//分页查询所有员工的信息
 		public List<Worker> getAllworker(Integer pageNo,Integer pageSize,
@@ -34,13 +31,12 @@ public interface WorkerService {
 		//根据ID查询员工信息
 		public Worker getWorker(Integer workerno);
 		
-		//根据姓名查询员工信息
-		public Worker getWorkername(String workername);
+		
 		
 		//添加员工信息
 		public boolean addWorker(Integer adminno,String workername,
 								String workersex,String workerphone,
 								Integer workersalary,String workerpwd);
 		//根据ID删除员工信息
-		public boolean delWorker(Integer workerno);
+		public boolean delWorker(Integer adminno);
 }
