@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <div class="account-box"> 
-                        <form id="from" role="form" >
+                        <form id="from" action="#">
                             <div class="form-group">
                                 <input type="text"  id="inputUsernameEmail" class="form-control" placeholder="请输入用户名">
                             </div>
@@ -106,6 +106,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						window.location.href=url+"/fin/z.html";
 					}
 					return true;
+					
 				},
 				error : function() {
 					alert("未知原因导致失败！");
@@ -120,10 +121,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </script>    
 
 
-
-
-
 	<input type="hidden" id="url" value="${pageContext.request.contextPath }">
   </body>
-  <input type="hidden" id="url" value="${pageContext.request.contextPath }">
 </html>
