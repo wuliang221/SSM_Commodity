@@ -92,6 +92,11 @@ public class WorkerServiceImpl implements WorkerService {
 		}
 		return result;
 	}
+	//查询总数
+	@Override
+	public int countWorker(String workername, Integer workerno) {
+		return workerMapper.countWorker(workername, workerno);
+	}
 	 
 
 }
