@@ -21,10 +21,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#"><i data-toggle="tooltip" data-placement="bottom" title="刷新" style="font-size:20px;" class="entypo-arrows-ccw"></i></a>
+                    <li><a  href="javascript:void(0)" onclick="location.reload()"><i data-toggle="tooltip" data-placement="bottom" title="刷新" style="font-size:20px;" class="entypo-home"></i></a>
                     </li>
                 </ul>
-
+s
                 <div id="nt-title-container" class="navbar-left running-text visible-lg">
                 <ul class="date-top">
                     <li class="entypo-calendar" style="margin-right:5px"></li>
