@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+/com
+=======
+/applicationContext-aop.xml
+/applicationContext-mybatis.xml
+/com
+/database.properties
+/log4j.properties
+/mybatis-config.xml
+/springmvc-servlet.xml
+>>>>>>> branch 'master' of https://github.com/wuliang221/SSM_Commodity.git
