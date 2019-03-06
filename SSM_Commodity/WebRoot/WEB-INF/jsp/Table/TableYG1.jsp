@@ -2,7 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="nest" id="FilteringClose">
+                        <div class="nest" id="FilteringClose"> 
+                        
                             <div class="body-nest" id="Filtering">
                                 <div class="row" style="margin-bottom:10px;">
                                     <div class="col-sm-4">
@@ -25,17 +26,17 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <c:forEach items="${}" var="s">
+                                    <c:forEach items="${worker }" var="w">
                                     <tr>
-                                        <td>${s. }</td>
-                                        <td>${s. }</td>
-                                        <td>${s. }</td>
-                                        <td>${s. }</td>
-                                        <td>${s.}</td>
-                                        <td>${s.}</td>
+                                        <td>${w.workerno }</td>
+                                        <td>${w.adminno }</td>
+                                        <td>${w.workername }</td>
+                                        <td>${w.workersex }</td>
+                                        <td>${w.workerphone}</td>
+                                        <td>${w.workersalary}</td>
                                         <td>
-                                            <button type="button" onclick="js_xiu2('${s. }','${s. }','${s. }','${s. }','${s. }')" class="btn btn-primary btn-xs">修改</button>
-                                            <button type="button" onclick="js_shanchu('${s. }','YG','${s. }')" class="btn btn-danger btn-xs">删除</button>
+                                            <button type="button" onclick="js_xiu4('${s.workerno }','${s.adminno }','${s.workername }','${s.workersex }','${s.workerphone }','${s.workersalary }')" class="btn btn-primary btn-xs">修改</button>
+                                            <button type="button" onclick="js_shanchu('${s.workerno }','YG','${s.workerno }')" class="btn btn-danger btn-xs">删除</button>
                                         </td>
                                     </tr>
                                     </c:forEach>
@@ -43,15 +44,15 @@
                                     </tbody>
                                 </table>
 
-                                 <ul>
-				<li>共${ps.totalCount }条记录&nbsp;&nbsp; 第${ps.currPageNo }/${ps.totalPageCount }页
-				</li>
-				<a class="btn btn-default" href="javascript:void(0);" onclick="supplierfirstPage()">首页</a>
-				<button class="btn btn-default" onclick="supplierupPage()">上一页</button>
-				<button class="btn btn-default" onclick="supplierdowmPage()">下一页</button>
-				<a class="btn btn-default" href="javascript:void(0);" onclick="supplierlastPage()">末页</a>
-				&nbsp;&nbsp;
-			</ul>
+                <ul>
+					<li>共${ps.totalCount }条记录&nbsp;&nbsp; 第${ps.currPageNo }/${ps.totalPageCount }页
+					</li>
+					<a class="btn btn-default" href="javascript:void(0);" onclick="supplierfirstPage()">首页</a>
+					<button class="btn btn-default" onclick="supplierupPage()">上一页</button>
+					<button class="btn btn-default" onclick="supplierdowmPage()">下一页</button>
+					<a class="btn btn-default" href="javascript:void(0);" onclick="supplierlastPage()">末页</a>
+					&nbsp;&nbsp;
+				</ul>
                             </div>
 
                         </div>

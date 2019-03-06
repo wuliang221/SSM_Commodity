@@ -122,7 +122,7 @@
 
 
 
-<!-- 职工工资模态框 -->
+<!-- 销售信息模态框 -->
 <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -174,7 +174,7 @@
 
 
 
-<!-- 资产类别模态框 -->
+<!-- 员工修改模态框 -->
 <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
