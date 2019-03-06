@@ -37,17 +37,16 @@
                                     </thead>
                                     <tbody>
                                     
-                                    <c:forEach items="${goods }" var="goods">
-                                     <input type="hidden" id="goodsno" value="${goods.goodsno }"/>
+                                    <c:forEach items="${goods }" var="g">
+                                     <input type="hidden" id="goodsno" value="${g.goodsno }"/>
                                     <tr>
-                                        <td>${goods.goodsname }</td>
-                                        <td>${goods.typeName }</td>
-                                        <td>${goods.supplierName }</td>
-                                        <td>${goods.goodscount }</td>
-                                        <td>${goods.goodsnorm}</td>
+                                        <td>${g.goodsname }</td>
+                                        <td>${g.typeName }</td>
+                                        <td>${g.supplierName }</td>
+                                        <td>${g.goodscount }</td>
+                                        <td>${g.goodsnorm}</td>
                                         <td>
-                                        	<button type="button" onclick="js_xiu1('${goods.goodsno }','${goods.goodsname }','${goods.typeName }','${goods.supplierName }','${goods.goodsunit }','${goods.goodsnorm }','${goods.goodscount }')" class="btn btn-primary btn-xs">修改</button>
-                                            <button type="button" onclick="js_shanchu('${goods.goodsno }','SP2','${goods.goodsname }')" class="btn btn-danger btn-xs">删除</button>
+                                        	<button type="button" onclick="js_xiu2('${g.goodsno }','${g.goodsname }','${g.goodscount }','${g.goodsnorm }')" class="btn btn-primary btn-xs">修改</button>
                                         </td>
                                     </tr>
                                     </c:forEach>

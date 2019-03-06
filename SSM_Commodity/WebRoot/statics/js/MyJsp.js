@@ -84,15 +84,31 @@ function js_xiu1(on,d1,d2,d3,d4,d5,d6) {
 	$("#inputEmail16").val(d6);
 	$("#myModal1").modal({backdrop:"static"});
 }
-//供应商修改模态框
-function js_xiu2(on,d1,d2,d3,d4) {
+
+//商品库存修改模态框
+function js_xiu2(on,d1,d2,d3,d4,d5) {
 	$("#inputEmail20").val(on);
 	$("#inputEmail21").val(d1);
 	$("#inputEmail22").val(d2);
 	$("#inputEmail23").val(d3);
-	$("#inputEmail24").val(d4);
 	$("#myModal2").modal({backdrop:"static"});
 }
+
+//供应商修改模态框
+function js_xiu3(on,d1,d2,d3,d4) {
+	$("#inputEmail30").val(on);
+	$("#inputEmail31").val(d1);
+	$("#inputEmail32").val(d2);
+	$("#inputEmail33").val(d3);
+	$("#inputEmail34").val(d4);
+	$("#myModal3").modal({backdrop:"static"});
+}
+
+
+
+
+
+
 
 //销售信息修改模态框
 function js_xiu3(on,id,id1,id2,id3) {

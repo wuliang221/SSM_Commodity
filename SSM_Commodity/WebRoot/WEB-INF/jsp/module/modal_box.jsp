@@ -1,6 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
-<!-- 商品添加模态框 -->
+
+
+<!-- 商品修改模态框 -->
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -68,42 +70,84 @@
 
 
 
-
-<!-- 供应商修改模态框 -->
+<!-- 商品库存修改模态框 -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel2">供应商修改</h4>
+        <h4 class="modal-title" id="myModalLabel2">商品修改</h4>
       </div>
       <div class="modal-body">
         <form class="form-horizontal">
         	<!-- 隐藏框，保存ID -->
-        	<input type="hidden" id="inputEmail20" value="供应商编号">
+        	<input type="hidden" id="inputEmail20" value="商品编号">
+		  <div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">商品名称</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" name="departmentalname" id="inputEmail21" disabled>
+		    </div>
+		  </div>
+		   <div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">库存</label>
+		    <div class="col-sm-10">
+		      <input type="tezt" class="form-control" name="wagecoefficient" id="inputEmail22" >
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">规格</label>
+		    <div class="col-sm-10">
+		      <input type="tezt" class="form-control" name="wagecoefficient" id="inputEmail23" >
+		    </div>
+		  </div>
+		</form>
+      </div>
+      <div class="modal-footer">
+  		<button type="button" class="btn btn-default" onclick="js_js_xiugai('spxiu')">保存</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 供应商修改模态框 -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel3">供应商修改</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+        	<!-- 隐藏框，保存ID -->
+        	<input type="hidden" id="inputEmail30" value="供应商编号">
         	
 		   <div class="form-group">
 			    <label for="inputEmail3" class="col-sm-2 control-label">供应商名称</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputEmail21">
+			      <input type="text" class="form-control" id="inputEmail31">
 			    </div>
 		   </div>
 		   <div class="form-group">
 			    <label for="inputEmail3" class="col-sm-2 control-label">供应商地址</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputEmail22">
+			      <input type="text" class="form-control" id="inputEmail32">
 			    </div>
 		   </div>
 		   <div class="form-group">
 			    <label for="inputEmail3" class="col-sm-2 control-label">联系人姓名</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputEmail23">
+			      <input type="text" class="form-control" id="inputEmail33">
 			    </div>
 		   </div>
 		   <div class="form-group">
 			    <label for="inputEmail3" class="col-sm-2 control-label">联系人电话</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputEmail24">
+			      <input type="text" class="form-control" id="inputEmail34">
 			    </div>
 		   </div>
 		</form>
