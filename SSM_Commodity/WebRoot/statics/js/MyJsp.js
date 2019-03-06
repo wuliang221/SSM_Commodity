@@ -21,9 +21,24 @@ function js_xiu2(on,d1,d2,d3,d4) {
 	$("#inputEmail24").val(d4);
 	$("#myModal2").modal({backdrop:"static"});
 }
-function js_xiu3(on,id,id1,id2,id3) {
 
+//销售信息修改模态框
+function js_xiu3(on,id,id1,id2,id3) {
+	
+	
 }
+
+//员工修改模态框
+function js_xiu4(on,id,id1,id2,id3) {
+	$("#inputEmail40").val(on);
+	$("#inputEmail41").val(d1);
+	$("#inputEmail42").val(d2);
+	$("#inputEmail43").val(d3);
+	$("#inputEmail44").val(d4);
+	$("#myModal4").modal({backdrop:"static"});
+	
+}
+
 
 
 
