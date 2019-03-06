@@ -24,8 +24,7 @@ public interface GoodsMapper {
 	 // 修改商品信息
 	public int updateGoods(@Param("goodsno")Integer goodsno,@Param("typeno")Integer typeno,
 							@Param("supplierno")Integer supplierno,@Param("goodsname")String goodsname,
-							@Param("goodsnorm")String goodsnorm,@Param("goodsunit")String goodsunit,
-							@Param("goodscount")Integer goodscount,@Param("goodsoutprise")Double goodsoutprise,
+							@Param("goodsunit")String goodsunit,@Param("goodsoutprise")Double goodsoutprise,
 							@Param("goodsinprise")Double goodsinprise);
 	
 	// 根据ID删除商品信息

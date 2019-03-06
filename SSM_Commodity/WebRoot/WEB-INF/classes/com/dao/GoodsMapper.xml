@@ -90,9 +90,7 @@
 	typeNo = #{typeno}, 
 	supplierNo = #{supplierno} , 
 	goodsName = #{goodsname} , 
-	goodsNorm = #{goodsnorm} , 
 	goodsUnit = #{goodsunit} , 
-	goodsCount = #{goodscount} , 
 	goodsOutprise = #{goodsoutprise} , 
 	goodsInprise = #{goodsoutprise}
 	

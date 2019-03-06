@@ -31,13 +31,11 @@ public class GoodsServiceImpl implements GoodsService {
 	//判断商品是否修改成功
 	@Override
 	public boolean update(Integer goodsno,Integer typeno,
-			Integer supplierno,String goodsname,
-			String goodsnorm,String goodsunit,
-			Integer goodscount,Double goodsoutprise,
+			Integer supplierno,String goodsname,String goodsunit,Double goodsoutprise,
 			Double goodsinprise) {
 		boolean result = false;
 		int rs = goodsMapper.updateGoods(goodsno, typeno, supplierno, goodsname, 
-											goodsnorm, goodsunit, goodscount, goodsoutprise, goodsinprise);
+											 goodsunit, goodsoutprise, goodsinprise);
 		if(rs > 0){
 			result = true;
 		}

@@ -36,7 +36,6 @@
 	                 <option value="${s.supplierno }">${s.suppliername }</option>
 	                 </c:forEach>
                    </select>
-				</select>
 			</div>
 		  </div>
 		   <div class="form-group">
@@ -60,7 +59,7 @@
 		</form>
       </div>
       <div class="modal-footer">
-  		<button type="button" class="btn btn-default" onclick="js_js_xiugai('add1')">保存</button>
+  		<button type="button" class="btn btn-default" onclick="js_js_xiugai('spxiu')">保存</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
       </div>
     </div>
@@ -110,7 +109,7 @@
 		</form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" onclick="js_js_xiugai('add2')">保存</button>
+        <button type="button" class="btn btn-default" onclick="js_js_xiugai('gyxiu')">保存</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
       </div>
     </div>
@@ -159,7 +158,7 @@
 		</form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" onclick="jjs_js_xiugai('add3')">保存</button>
+        <button type="button" class="btn btn-default" onclick="jjs_js_xiugai('ygxiu')">保存</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
       </div>
     </div>
@@ -199,7 +198,7 @@
 		</form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" onclick="js_js_xiugai('add4')">保存</button>
+        <button type="button" class="btn btn-default" onclick="js_js_xiugai('lbxiu')">保存</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
       </div>
     </div>

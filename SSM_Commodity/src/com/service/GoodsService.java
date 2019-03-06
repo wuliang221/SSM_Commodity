@@ -37,9 +37,8 @@ public interface GoodsService {
 
 		// 修改商品信息
 		public boolean update(Integer goodsno,Integer typeno,
-				Integer supplierno,String goodsname,
-				String goodsnorm,String goodsunit,
-				Integer goodscount,Double goodsoutprise,
+				Integer supplierno,String goodsname,String goodsunit
+				,Double goodsoutprise,
 				Double goodsinprise);
 		
 		//根据ID删除商品信息

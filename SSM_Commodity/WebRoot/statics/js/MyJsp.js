@@ -1,4 +1,73 @@
 //主页js
+//修改保存
+function js_js_xiugai(DD){
+	var url=$("#url").val();
+	//Ajax请求参数
+	var data2="";
+	if(DD == "spxiu"){
+		url+="/goods/update.json";
+		var id=$("#inputEmail10").val();
+		var z11=$("#inputEmail11").val();
+		var z12=$("#inputEmail12").val();
+		var z13=$("#inputEmail13").val();
+		var z14=$("#inputEmail14").val();
+		var z15=$("#inputEmail15").val();
+		var z16=$("#inputEmail16").val();
+		data2={goodsno:id,goodsname:z11,typeno:z12,supplierno:z13,goodsunit:z14,goodsinprise:z15,goodsoutprise:z16};
+	}else if(date == 2){
+		url+="";
+		var z21=$("#inputEmail21").val();
+		var z22=$("#inputEmail22").val();
+		var z23=$("#inputEmail23").val();
+		data2={departmentalName:z21,personsNum:z22,wageCoefficient:z23};
+	}else if(date == "3"){
+		var z1=$("#inputEmail31").val();
+		var z2=$("#inputEmail32").val();
+		var z3=$("#inputEmail33").val();
+		var z4=$("#inputEmail34").val();
+		
+	}else if(date == "4"){
+		var z1=$("#inputEmail41").val();
+		var z2=$("#inputEmail42").val();
+		
+	}else if(date == "5"){
+		var z1=$("#inputEmail51").val();
+		var z2=$("#inputEmail52").val();
+		
+	}else if(date == "6"){
+		var z1=$("#inputEmail61").val();
+		var z2=$("#inputEmail62").val();
+		var z3=$("#inputEmail63").val();
+		
+	}else if(date == "7"){
+		var z1=$("#inputEmail71").val();
+		var z2=$("#inputEmail72").val();
+		var z3=$("#inputEmail73").val();
+		
+	}else if(date == "8"){
+		
+	}else if(date == "9"){
+		
+	}else{
+		alert("网页出现错误");
+		return;
+	}
+	$.ajax({
+		type :"post",
+		url:url,
+		data:data2,
+		dataType:"json",	
+		success : function(data) {
+			if(data=="session"){
+			alert("修改成功！");
+			shuaxin();
+			}
+		},
+		error : function(data) {
+			alert("修改失败！");
+		}
+	});
+}
 
 //修改模态框弹出并赋值
 //商品修改模态框

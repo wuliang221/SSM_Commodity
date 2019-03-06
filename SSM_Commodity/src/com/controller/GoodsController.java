@@ -134,13 +134,13 @@ public class GoodsController {
 	@ResponseBody
 	public Object update(@RequestParam("goodsno")Integer goodsno,@RequestParam("typeno")Integer typeno,
 			@RequestParam("supplierno")Integer supplierno,@RequestParam("goodsname")String goodsname,
-			@RequestParam("goodsnorm")String goodsnorm,@RequestParam("goodsunit")String goodsunit,
-			@RequestParam("goodscount")Integer goodscount,@RequestParam("goodsoutprise")Double goodsoutprise,
+			@RequestParam("goodsunit")String goodsunit,@RequestParam("goodsoutprise")Double goodsoutprise,
 			@RequestParam("goodsinprise")Double goodsinprise){
+		//goodsname:z11,typeno:z12,supplierno:z13,goodsunit:z14,goodsinprise:z15,goodsoutprise:z16
 		boolean result=false;
 		String json=null;
 		result=goodsService.update(goodsno, typeno, supplierno, goodsname, 
-									goodsnorm, goodsunit, goodscount, goodsoutprise, goodsinprise);
+									 goodsunit, goodsoutprise, goodsinprise);
 		if(result){
 			json="session";
 			
