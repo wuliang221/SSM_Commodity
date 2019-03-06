@@ -291,7 +291,7 @@ function js_table(date) {
 		com="";
 	}else if(date==41){
 		$("#biaodanname").text("员工信息表");
-		com="";
+		com="/worker/worker.html";
 	}
 	$.ajax({
 		type :"get",

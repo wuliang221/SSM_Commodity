@@ -19,8 +19,19 @@ public class Worker {
     private Integer workersalary;
     //密码
     private String workerpwd;
+    
+    private String adminname;
 
-    public Integer getWorkerno() {
+    
+    public String getAdminname() {
+		return adminname;
+	}
+
+	public void setAdminname(String adminname) {
+		this.adminname = adminname;
+	}
+
+	public Integer getWorkerno() {
         return workerno;
     }
 

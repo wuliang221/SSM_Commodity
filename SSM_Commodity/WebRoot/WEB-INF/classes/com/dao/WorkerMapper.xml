@@ -9,6 +9,7 @@
     <result column="workerPhone" property="workerphone" jdbcType="VARCHAR" />
     <result column="workerSalary" property="workersalary" jdbcType="INTEGER" />
     <result column="workerPwd" property="workerpwd" jdbcType="VARCHAR" />
+    <result column="adminName" property="adminname" jdbcType="VARCHAR" />
   </resultMap>
   <!-- 登陆匹配 -->
   <select id="getwork" resultType="Worker">
@@ -27,7 +28,7 @@ SELECT 	workerNo,
 			AND workerPwd=#{workerpwd}
 		
   </select>
-  <!-- 查询用户账号名放入session -->
+  <!-- 根据ID查询用户账号名放入session -->
   <select id="getWorkerName" resultType="Worker" >
   SELECT 	
 	  	workerNo, 
@@ -49,6 +50,48 @@ UPDATE commodity_database.worker
 	WHERE
 	workerNo = #{workerno} ;
   </update>
+  <!-- 查询员工总数量 -->
+  <select id="countWorker" resultType="int">
+	  
+	SELECT COUNT(*)
+		FROM 
+		commodity_database.worker 
+		WHERE 1=1
+		<if test="workername !='' and workername != null">
+			AND workername LIKE CONCAT ("%",#{workername},"%")
+		</if>
+		<if test="workerno !='' and workerno !=null">
+				AND w.adminNo=#{workerno}
+		</if>  
+  </select>
+  <!--分页查询员工  -->
+  <select id="getAllworker" resultType="Worker">
+
+SELECT 	
+	w.workerNo, 
+	w.adminNo, 
+	w.workerName, 
+	w.workerSex, 
+	w.workerPhone, 
+	w.workerSalary, 
+	w.workerPwd,
+	a.adminName
+	FROM 
+	commodity_database.worker AS w 
+		INNER JOIN  commodity_database.admin AS a
+			ON w.adminNo=a.adminNo
+				WHERE 1=1
+				<if test="workername !='' and workername !=null">
+				AND W.workername LIKE CONCAT ("%",#{workername},"%")
+				</if>
+				<if test="workerno !='' and workerno !=null">
+				AND w.adminNo=#{workerno}
+				</if>  
+		LIMIT #{pageNo},#{pageSize}
+  </select>
+  
+  
+  
   <!-- 修改员工信息 -->
   <update id="updateWorker">
   
@@ -66,7 +109,7 @@ UPDATE commodity_database.worker
   
   </update>
   
-  <select id="">
+  <select id="getWorker" resultType="Worker">
   
   <!-- 根据ID查询员工信息 -->
 SELECT 	

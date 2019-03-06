@@ -2,6 +2,8 @@ package com.service;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.pojo.Worker;
 
 
@@ -39,4 +41,7 @@ public interface WorkerService {
 								Integer workersalary,String workerpwd);
 		//根据ID删除员工信息
 		public boolean delWorker(Integer adminno);
+		
+		//查询员工总数
+		public int countWorker(String workername,Integer workerno);
 }

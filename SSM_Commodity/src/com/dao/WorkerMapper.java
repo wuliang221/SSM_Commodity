@@ -13,6 +13,8 @@ public interface WorkerMapper {
 						@Param("adminno")Integer adminno);
 	// 查询用户名（放入session）
 	public Worker getWorkerName(@Param("workerno")Integer workerno);
+	//查询员工总数
+	public int countWorker(@Param("workername")String workername,@Param("workerno")Integer workerno);
 	//分页查询所有员工的信息
 	public List<Worker> getAllworker(@Param("pageNo")Integer pageNo,@Param("pageSize")Integer pageSize,
 										@Param("workerno")Integer workerno,@Param("workername")String workername);
