@@ -29,7 +29,7 @@
 
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="商品详情">
-                                <i class="icon-document-edit"></i>
+                                <i class="icon icon-align-justify"></i>
                                 <span>商品详情</span>
 
                             </a>
@@ -44,7 +44,7 @@
                         </li>
                         <li>
                             <a class="tooltip-tip ajax-load" href="javascript:void(0);" onclick="js_add('addSP')" title="商品添加">
-                                <i class="icon-feed"></i>
+                                <i class="icon icon-plus"></i>
                                 <span>商品添加</span>
 
                             </a>
@@ -63,19 +63,19 @@
 
                         <li>
                             <a class="tooltip-tip" href="#" title="供应商详情">
-                                <i class="icon-document-new"></i>
+                                <i class="icon icon-align-justify"></i>
                                 <span>供应商详情</span>
                             </a>
                             <ul>
                                  <li>
-                                    <a class="tooltip-tip2 ajax-load" href="javascript:void(0);" onclick="js_table('21')" title="供应商信息"><i class="icon-media-record"></i><span>供应商信息</span></a>
+                                    <a class="tooltip-tip2 ajax-load" href="javascript:void(0);" onclick="js_table('21')" title="供应商信息"><i class="entypo-archive"></i><span>供应商信息</span></a>
                                 </li>
                             </ul>
                         </li>
 
                         <li>
-                            <a class="tooltip-tip " href="javascript:void(0);" onclick="js_add('addGYS')" title="供应商添加">
-                                <i class="icon-download"></i>
+                            <a class="tooltip-tip" href="javascript:void(0);" onclick="js_add('addGYS')" title="供应商添加">
+                                <i class="icon icon-plus"></i>
                                 <span>供应商添加</span>
                             </a>
                         </li>
@@ -93,7 +93,7 @@
                         </li>
                         <li>
                             <a class="tooltip-tip" href="#" title="销售详情">
-                                <i class="icon-monitor"></i>
+                                <i class="icon icon-align-justify"></i>
                                 <span>销售详情</span>
                             </a>
                             <ul>
@@ -106,7 +106,7 @@
                         </li>
                         <li>
                             <a class="tooltip-tip ajax-load" href="javascript:void(0);" onclick="js_add('addXS')" title="新增销售信息">
-                                <i class="icon-location"></i>
+                                <i class="icon icon-plus"></i>
                                 <span>新增销售信息</span>
                             </a>
                         </li>
@@ -122,13 +122,13 @@
                         </li>
                         <li>
                             <a class="tooltip-tip ajax-load" href="javascript:void(0);" onclick="js_table('41')" title="员工信息">
-                                <i class="icon-location"></i>
+                                <i class="entypo-users"></i>
                                 <span>员工信息</span>
                             </a>
                         </li>
                         <li>
                             <a class="tooltip-tip ajax-load" href="javascript:void(0);" onclick="js_add('addYG')" title="员工添加">
-                                <i class="icon-location"></i>
+                                <i class="entypo-user-add"></i>
                                 <span>员工添加</span>
                             </a>
                         </li>
