@@ -4,6 +4,7 @@ function js_js_xiugai(DD){
 	var url=$("#url").val();
 	//Ajax请求参数
 	var data2="";
+	var close="";
 	if(DD == "spxiu"){
 		url+="/goods/update.json";
 		var id=$("#inputEmail10").val();
@@ -13,6 +14,7 @@ function js_js_xiugai(DD){
 		var z14=$("#inputEmail14").val();
 		var z15=$("#inputEmail15").val();
 		var z16=$("#inputEmail16").val();
+		close=$("#myModal1");
 		data2={goodsno:id,goodsname:z11,typeno:z12,supplierno:z13,goodsunit:z14,goodsinprise:z15,goodsoutprise:z16};
 	}else if(date == 2){
 		url+="";
@@ -60,6 +62,7 @@ function js_js_xiugai(DD){
 		success : function(data) {
 			if(data=="session"){
 			alert("修改成功！");
+			close.modal('toggle');
 			shuaxin();
 			}
 		},
